@@ -1,0 +1,155 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-Y: scroll;
+    padding:10px 100px;
+    background-color: #343541;
+    text-align: center;
+}
+
+* { 
+    box-sizing: border-box;
+   
+}
+
+button {
+    cursor: pointer;
+    background-color: none;
+    border: 2px solid grey;
+    color: white;
+    background-color: #343541;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background-color: #4c4d58;
+    transition: 400ms ease-in-out;
+
+}
+
+#notecontainer {
+    margin: auto;
+    height:fit-content;
+    width:100%;
+    padding:0px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap:10px;
+   
+  
+    
+}
+
+input#title {
+   
+    height:50px !important;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    color: 343541;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 4px;
+ 
+}
+
+input.title:focus {
+  
+    border:2px solid forestgreen;
+    outline: 2px solid forestgreen;
+}
+
+textarea {
+    margin: auto;
+    height:50px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding:5px 10px;
+    text-align: center;
+
+    color: 343541;
+    font-size: 14px;
+    letter-spacing: 4px;
+
+}
+
+#container {
+
+  
+    text-align: center;
+    margin-top:5px;
+    min-height: calc(100vh - 300px);
+    max-height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start !important;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 10px;
+   
+}
+
+.newtask {
+   
+  
+    height:fit-content !important;
+    width:100%;
+    background-color:#343541;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 2px;
+    padding:5px 5px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid gray;
+}
+
+.newtask:hover {
+    background-color: #4c4d58;
+    transition: 400ms ease-in-out;
+}
+
+h1 {
+    margin: auto;
+    font-size:40px;
+    display: block;
+    color: white;
+    padding: 5px;
+   
+}
+
+p {
+    color: white;
+    margin:auto;
+    font-size: 15px;
+    padding: 5px;
+}
+
+button.deletebutton {
+ 
+    right:1px;
+    top:50%;
+    background-color: red;
+    color: white;
+}
+
+button.deletebutton:hover {
+    background-color: rgb(243, 27, 27);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+img.icon {
+    margin: auto;
+    height: 200px;
+    width: 150px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+
+<img src="ikon.png">
+
+<div id="notecontainer">
+
+    <input id="title" type="text" placeholder="Write a Title">
+    <textarea id="note" placeholder="Write Your Note"></textarea>
+    <button onclick="ekle()">Add New Task</button>
+    
+</div>
+
+<div id="container"></div>
+
+
+</body>
+
+<script>
+
+function ekle() {
+
+    let newtitle = document.getElementById("title").value;
+    let newnote = document.getElementById("note").value;
+
+    if ( newtitle == "" || newnote ==  "" ) {
+
+        alert("Lütfen Boş Alan Bırakmayınız")
+
+    }
+
+    else {
+
+    
+    const container = document.getElementById("container");
+    const newTaskDiv = document.createElement("div");
+    newTaskDiv.classList.add("newtask");
+    container.appendChild(newTaskDiv);
+    const title = document.createElement("h1");
+    newTaskDiv.appendChild(title);
+    const newTask = document.createElement("p");
+    newTaskDiv.appendChild(newTask);
+    title.innerHTML = newtitle;
+    newTask.innerHTML = newnote;
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.classList.add("deletebutton");
+    newTaskDiv.appendChild(deleteButton);
+    
+    deleteButton.addEventListener("click", function() {
+    newTaskDiv.remove();
+    })
+
+    document.getElementById("title").addEventListener("click", function() {
+    this.value = "";
+    })
+
+    document.getElementById("note").addEventListener("click", function() {
+    this.value = "";
+    })
+
+    }
+
+}
+
+
+$(function() {
+$("#container").sortable();
+
+
+
+})
+
+
+
+
+</script>
+
+</html>
